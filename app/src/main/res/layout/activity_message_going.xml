@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFEE"
+    tools:context="com.saurabh.srmmall.MessageGoingActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ViewTootlBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/ViewTootlBarName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Srm Mall"
+            android:fontFamily="@font/dancing"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/GoingToolbar"
+        android:layout_below="@id/ViewTootlBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/UserName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Message"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/MessageScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/SendLayout"
+        android:layout_below="@id/GoingToolbar">
+
+        <LinearLayout
+            android:id="@+id/GoingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/GoingToolbar"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/SendLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="@color/MessageBack"
+        android:orientation="horizontal">
+
+        <EditText
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="10"
+            android:id="@+id/SendMessageMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/account_edittext_box"
+            android:hint="Type a message"
+            android:imeOptions="actionNone"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/SendMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="7"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/ic_action_send" />
+    </LinearLayout>
+</RelativeLayout>

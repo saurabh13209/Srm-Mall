@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.saurabh.srmmall">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".CreateAccountActivity" />
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".MessageGoingActivity" />
+        <activity android:name=".ProductActivity" />
+        <activity android:name=".ProductViewActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".EditProductActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".AskAnybodyActivity" />
+        <activity android:name=".AskAddActivity" />
+        <activity android:name=".AskSelfActivity"></activity>
+    </application>
+
+</manifest>

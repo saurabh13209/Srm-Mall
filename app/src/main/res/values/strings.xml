@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SrmMall</string>
+    <string name="SearchEditTextString">Search Product,Seller,Games,Software etc</string>
+
+    <string name="SetAndroidId">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/SetId.php</string>
+    <string name="GetMarket">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/getMarket.php</string>
+    <string name="CreateShopKeeper">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/ShopMaker.php</string>
+    <string name="GetMessage">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/GetMessage.php</string>
+    <string name="SetName">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/setName.php</string>
+    <string name="ProductLaunch">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/ProductLaunch.php</string>
+    <string name="ImageLoader">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/</string>
+    <string name="SendMessage">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/SendMessage.php</string>
+    <string name="GetAllMessage">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/GetAllMessage.php</string>
+    <string name="SearchMain">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/Search.php</string>
+    <string name="EditProduct">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/EditProduct.php</string>
+    <string name="DeleteProduct">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/DeleteProduct.php</string>
+    <string name="EditProfile">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/EditShop.php</string>
+    <string name="SendRequest">https://lusitanian-pines.000webhostapp.com/Srm Mall/SendRequest.php</string>
+    <string name="GetRequest">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/GetRequest.php</string>
+    <string name="GetSelfRequest">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/GetSelfRequest.php</string>
+    <string name="DeleteRequest">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/DeleteRequest.php</string>
+    <string name="RefreshRequest">https://lusitanian-pines.000webhostapp.com/Srm%20Mall/RefreshRequest.php</string>
+    <string name="Disclaimer">1. Srm Mall is just a platform for selling and buying goods in the hostel.\n\n
+        2. This App does not give any warranty , guaranty on any product sold. \n\n
+        3. Srm Mall is not responsible for any damage/defect found in the product. \n\n
+        4. Srm Mall\' developer do not promote any type of usage of narcotic things by this app.\n\n
+        5. Srm Mall is not responsible for the quality , quantity of product sold.\n\n
+        </string>
+
+</resources>

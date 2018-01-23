@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.saurabh.srmmall.AskAddActivity"
+    android:focusableInTouchMode="true"
+    android:focusedByDefault="false">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/MessageToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Request Generator"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@id/MessageToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/AddName"
+                android:inputType="textPersonName"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/account_edittext_box"
+                android:hint="Name"
+                android:padding="10dp"/>
+
+
+            <EditText
+                android:id="@+id/AddMob"
+                android:inputType="number"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/account_edittext_box"
+                android:hint="Contact Number"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/AddText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:background="@drawable/account_edittext_box"
+                android:scrollbars="vertical"
+                android:lines="8"
+                android:minLines="4"
+                android:maxLines="10"
+                android:padding="10dp"
+                android:hint="Request Text"
+                android:gravity="top|left"
+                android:layout_marginTop="30dp"/>
+
+            <Button
+                android:id="@+id/AskNext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/account_button"
+                android:text="Next"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="40dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

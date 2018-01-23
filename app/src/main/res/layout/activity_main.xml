@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="com.saurabh.srmmall.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/MainToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-10dp"
+                android:fontFamily="@font/dancing"
+                android:gravity="center"
+                android:text="Srm Mall"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/MainToolBar2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/MainToolBar"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:id="@+id/SearchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:paddingTop="5dp"
+                android:id="@+id/MainListSearchBo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/SearchEditTextString"
+                android:inputType="textPersonName" />
+
+            <ImageButton
+                android:id="@+id/MainListSearchButto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_menu_search" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/MainToolBar2"
+        android:layout_above="@id/adView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <HorizontalScrollView
+                android:id="@+id/Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/MainToolBar2"
+                android:paddingRight="5dp"
+                android:background="#f1f1f1"
+                android:scrollbars="none">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="#f1f1f1">
+
+
+                    <ImageView
+                        android:id="@+id/MallFilter"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="1dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFFFFF"
+                        android:src="@drawable/srm_mall"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp" />
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="1dp"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/PackedFilter"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/packed"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="1dp"
+                        android:background="@android:color/white"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/CookedFilter"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/cooked"
+                            android:padding="10dp"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="1dp"
+                        android:id="@+id/StationFilter"
+                        android:adjustViewBounds="true"
+                        android:background="#FFFFFF"
+                        android:src="@drawable/station"
+                        android:padding="10dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp"/>
+
+                    <ImageView
+                        android:id="@+id/ElectronicFilter"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="1dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFFFFF"
+                        android:src="@drawable/electronic"
+                        android:padding="10dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp" />
+
+                    <ImageView
+                        android:id="@+id/GamesFilter"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="1dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFFFFF"
+                        android:src="@drawable/games"
+                        android:padding="10dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp" />
+
+
+                    <ImageView
+                        android:id="@+id/DrugsFilter"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="1dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFFFFF"
+                        android:src="@drawable/drugs"
+                        android:padding="10dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp" />
+
+
+                    <ImageView
+                        android:id="@+id/QuestionFilter"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_margin="1dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFFFFF"
+                        android:src="@drawable/question"
+                        android:padding="10dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="1dp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout
+                android:id="@+id/MainList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#F5f5f5">
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/MainSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_settings"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6626107194157938/9071459876">
+
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
