@@ -28,6 +28,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.GlideBitmapDrawable;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
@@ -261,19 +264,25 @@ public class ProductActivity extends AppCompatActivity {
     }
 
     private void sendData(String URL) {
-        progressDialog.show();
         StringRequest sendProduct;
-        if (isImageSaved) {
+        if (isImageSaved)
             sendProduct = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    progressDialog.dismiss();
-                    finish();
-                    MobileAds.initialize(ProductActivity.this,
-                            "ca-app-pub-6626107194157938~6507686342");
-
+                    progressDialog.show();
+                    AdRequest adRequest = new AdRequest.Builder().build();
                     mInterstitialAd = new InterstitialAd(ProductActivity.this);
                     mInterstitialAd.setAdUnitId("ca-app-pub-6626107194157938/3853672659");
+                    mInterstitialAd.loadAd(adRequest);
+                    mInterstitialAd.setAdListener(new AdListener(){
+                        public void onAdLoaded(){
+                            if (mInterstitialAd.isLoaded()){
+                                progressDialog.dismiss();
+                                finish();
+                                mInterstitialAd.show();
+                            }
+                        }
+                    });
 
                 }
             }, new Response.ErrorListener() {
@@ -304,12 +313,12 @@ public class ProductActivity extends AppCompatActivity {
                     map.put("electronic", isCheckedMain(Electronic));
                     map.put("movie", isCheckedMain(Games));
                     map.put("drug", isCheckedMain(Drugs));
-                    map.put("others",isCheckedMain(Others));
+                    map.put("others", isCheckedMain(Others));
 
                     return map;
                 }
             };
-        } else {
+        else {
             final int Num = new Random().nextInt(10000000);
             sendProduct = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override

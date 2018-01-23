@@ -146,7 +146,7 @@ public class SettingActivity extends AppCompatActivity {
                     }
                     break;
                 case 4:
-                    Name.setText("Ask Anybody");
+                    Name.setText("Request Anybody");
                     image.setImageResource(R.mipmap.ic_group);
                     break;
                 case 5:

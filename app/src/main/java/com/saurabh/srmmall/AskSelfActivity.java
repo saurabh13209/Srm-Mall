@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -59,6 +60,7 @@ public class AskSelfActivity extends AppCompatActivity {
             public void onResponse(String response) {
                 try {
                     progressDialog.dismiss();
+                    SrNo = new ArrayList();
                     JSONArray array = new JSONArray(response);
                     for (int i=0 ; i<array.length() ; i++){
                         JSONArray inner = array.getJSONArray(i);
