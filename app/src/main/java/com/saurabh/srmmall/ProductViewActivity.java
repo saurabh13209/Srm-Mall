@@ -1,8 +1,14 @@
 package com.saurabh.srmmall;
 
+import android.*;
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +32,7 @@ import java.util.Map;
 
 public class ProductViewActivity extends AppCompatActivity {
 
-    Button Next;
+    Button Next , CallNow;
     TextView ProductName, ShopName, Price, Amount, Negotiable, ToolBarName, Mob;
     ImageView Image;
     ShareHolder shareHolder;
@@ -51,6 +57,7 @@ public class ProductViewActivity extends AppCompatActivity {
         Amount = findViewById(R.id.ViewLeft);
         Negotiable = findViewById(R.id.Description);
         Next = findViewById(R.id.ViewButton);
+        CallNow = findViewById(R.id.CallNowButton);
         shareHolder = new ShareHolder(ProductViewActivity.this);
 
         AdView mAdView = findViewById(R.id.adView);
@@ -74,6 +81,7 @@ public class ProductViewActivity extends AppCompatActivity {
                 Mob.setText("No Contact Number..");
             } else {
                 Mob.setText("Mob: " + Extra.getString("Mob"));
+                CallFunction();
             }
             if (Extra.getString("packed").equals("true")) {
                 Text = Text + "Product is Packed\n";
@@ -163,6 +171,38 @@ public class ProductViewActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void CallFunction() {
+        CallNow.setVisibility(View.VISIBLE);
+        CallNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ActivityCompat.checkSelfPermission(ProductViewActivity.this , Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED){
+                    CallMain();
+                }else{
+                    ActivityCompat.requestPermissions(ProductViewActivity.this , new String[]{Manifest.permission.CALL_PHONE},1002);
+                }
+            }
+        });
+    }
+
+    private void CallMain() {
+        String dial = "tel:" + Mob.getText().toString();
+        startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (requestCode==1002){
+            if (grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                CallMain();
+            }
+        }else{
+            Toast.makeText(this, "Sorry you can't call", Toast.LENGTH_SHORT).show();
+            ActivityCompat.requestPermissions(ProductViewActivity.this , new String[]{Manifest.permission.CALL_PHONE},1002);
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     private void sendName(final String name) {
