@@ -265,11 +265,11 @@ public class ProductActivity extends AppCompatActivity {
 
     private void sendData(String URL) {
         StringRequest sendProduct;
+        progressDialog.show();
         if (isImageSaved)
             sendProduct = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
-                    progressDialog.show();
                     AdRequest adRequest = new AdRequest.Builder().build();
                     mInterstitialAd = new InterstitialAd(ProductActivity.this);
                     mInterstitialAd.setAdUnitId("ca-app-pub-6626107194157938/3853672659");
