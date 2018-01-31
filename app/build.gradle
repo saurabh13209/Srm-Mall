@@ -26,12 +26,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile 'com.mcxiaoke.volley:library:1.0.18'
-    // json
-    compile 'com.android.support:design:26.1.0'
-    //floating button
-    compile 'com.github.bumptech.glide:glide:3.8.0'
-    //Loading Image
+    compile 'com.mcxiaoke.volley:library:1.0.18'// json
+    compile 'com.android.support:design:26.1.0'//floating button
+    compile 'com.github.bumptech.glide:glide:3.8.0'//Loading Image
     implementation 'com.google.android.gms:play-services-ads:11.0.4'
 }
 

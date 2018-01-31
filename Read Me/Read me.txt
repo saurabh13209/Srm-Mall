@@ -1,0 +1,4 @@
+This is an android app which help student of hostel to sell or buy good .
+This app is served as platform on which any one can upload product and one can buy product.
+
+This app also have Private Messaging Service which help you to contact seller without knowing his/her number
