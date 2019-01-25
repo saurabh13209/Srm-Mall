@@ -11,14 +11,14 @@ This App act as a platform for the buyer and seller.
 
 Some images of the Application are:
 
-# Home Page:
-![alt text](https://github.com/saurabh13209/Srm-Mall/blob/master/Read%20Me/Welcome%20Page.png)
+<h5>Home Activity</h5>
+<img src="https://github.com/saurabh13209/Srm-Mall/blob/master/Read%20Me/Welcome%20Page.png" width="200" height="400" />
 
-# Product Deletion
-![alt text](https://github.com/saurabh13209/Srm-Mall/blob/master/Read%20Me/Edit%20Product.png)
+<h5>Product Edit Activity</h5>
+<img src="https://github.com/saurabh13209/Srm-Mall/blob/master/Read%20Me/Edit%20Product.png" width="200" height="400" />
 
-# Product uploading
-![alt text](https://github.com/saurabh13209/Srm-Mall/blob/master/Read%20Me/Sell%20Prouct.png)
+<h5>Product Uploading Activity</h5>
+<img src="https://github.com/saurabh13209/Srm-Mall/blob/master/Read%20Me/Sell%20Prouct.png" width="200" height="400" />
 
-# Setting page
-![alt text](https://github.com/saurabh13209/Srm-Mall/blob/master/Read%20Me/Setting%20Page.png)
+<h5>Setting Activity</h5>
+<img src="https://github.com/saurabh13209/Srm-Mall/blob/master/Read%20Me/Setting%20Page.png" width="200" height="400" />
